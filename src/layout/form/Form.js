@@ -1,7 +1,7 @@
 import * as React from "react";
 import "./Form.scss";
 export default function CustomForm(props) {
-  const { formError, onSubmit, insideTab, removePadding, title, children } =
+  const { onSubmit, insideTab, removePadding, title, children } =
     props;
 
   return (

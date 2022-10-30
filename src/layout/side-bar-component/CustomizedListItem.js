@@ -1,5 +1,5 @@
 //UTILITIES
-import { useNavigate, useLocation } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import React, { useState } from "react";
 
 //COMPONENT
@@ -19,16 +19,10 @@ export function CustomizedListItem(props) {
   //PROPS
   const {
     index,
-    drawer,
     item,
-    length,
-    selectedIndex,
     handleSelectedIndex,
     minimizeSidebar,
-    handleMinimiseSidebar,
   } = props;
-  const location = useLocation().pathname.split("/");
-
   //VARIABLES
   let navigate = useNavigate();
 

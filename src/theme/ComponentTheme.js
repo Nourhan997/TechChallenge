@@ -1,5 +1,5 @@
 import "./variables.scss";
-import { Menu, List, Drawer, Dialog, Select } from "@mui/material";
+import { Menu, List, Drawer, Dialog } from "@mui/material";
 import styled from "@emotion/styled";
 import theme from "./SuperAdminTheme";
 import { MobileOverBreakPoint } from "../core/variables/Variables";
