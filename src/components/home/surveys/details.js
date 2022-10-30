@@ -111,13 +111,13 @@ export default function Details() {
                   aria-controls="panel1bh-content"
                   id="panel1bh-header"
                 >
-                  <Typography sx={{flexShrink: 0 }} className="labels">
-                    {item.label}
-                  </Typography>
+                  <div className="accord">
+                    <Typography className="labels">{item.label}</Typography>
 
-                  <Typography className="answers">
-                    {item.answer.length} answers <ExpandMoreIcon />
-                  </Typography>
+                    <Typography className="answers">
+                      {item.answer.length} answers <ExpandMoreIcon />
+                    </Typography>
+                  </div>
                 </AccordionSummary>
                 <AccordionDetails>
                   {item.type === "qcm" ? (
