@@ -42,7 +42,7 @@ export function SideBar(props) {
           minimizeSidebar={minimizeSidebar}
           handleMinimiseSidebar={handleMinimiseSidebar}
         />
-      ))}
+      ))} 
     </StyledListNav>
   );
 }

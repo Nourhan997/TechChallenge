@@ -111,7 +111,7 @@ export default function Details() {
                   aria-controls="panel1bh-content"
                   id="panel1bh-header"
                 >
-                  <Typography sx={{ width: "85%", flexShrink: 0 }}>
+                  <Typography sx={{flexShrink: 0 }} className="labels">
                     {item.label}
                   </Typography>
 
@@ -122,7 +122,7 @@ export default function Details() {
                 <AccordionDetails>
                   {item.type === "qcm" ? (
                     <div style={{ display: "flex" }}>
-                      <div className="w-40">
+                      <div className="w-40 pie">
                         <Pie
                           data={{
                             labels: item.options.map(function (d) {
@@ -159,7 +159,7 @@ export default function Details() {
                       </div>
                     </div>
                   ) : item.type === "Inputnumeric" ? (
-                    <div className="w-50">
+                    <div className="w-50 pie">
                       <Bar
                         options={options}
                         data={{
@@ -205,7 +205,7 @@ export default function Details() {
                       ))}
                     </>
                   ) : (
-                    <div className="w-40">
+                    <div className="w-40 pie">
                       <PolarArea
                         data={{
                           labels: item.options.map(function (d) {

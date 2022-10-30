@@ -2,8 +2,9 @@
 import React, { useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router";
 import palette from "../../theme/color.scss";
-
+import { SideBarItems } from "../../core/variables/SideBarItems";
 //COMPONENT
+import CustomizedListItem from "../../layout/side-bar-component/CustomizedListItem";
 import NoticeConfirmation from "../../layout/common-component/prompts-component/NoticeConfirmation";
 import ResponseSnackbar from "../../layout/response-messages/ResponseSnackbar";
 import { ChatIcon, UsersIcon } from "../../assets/icons/SideBarSVG";
@@ -25,7 +26,6 @@ import "./NavigationBar.scss";
 import { UserLogout } from "../../core/services/login";
 
 function NavigationBar(props) {
-
   const isAuth = sessionStorage.getItem("session") ? true : false;
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [openLogOut, setOpenLogOut] = useState(false);
@@ -34,7 +34,7 @@ function NavigationBar(props) {
   const [toggleSnackbar, setToggleSnackbar] = useState(false);
   const [error, setError] = useState(false);
   const [openSideBar, setOpenSideBar] = useState(true);
-
+  const [selectedIndex, setSelectedIndex] = useState(null);
   const navigate = useNavigate();
 
   //functions
@@ -59,6 +59,17 @@ function NavigationBar(props) {
 
   const handleLogout = () => {
     setOpenLogOut(true);
+  };
+  const handleSelectedIndex = (value) => {
+    setSelectedIndex(value);
+  };
+
+  const CheckSideBarContainer = () => {
+    if (!window.location.pathname.includes("/chat")) {
+      return true;
+    } else {
+      return false;
+    }
   };
 
 
@@ -98,7 +109,7 @@ function NavigationBar(props) {
               <img
                 src={logo}
                 alt="LOGO"
-                onClick={() => (isAuth ? navigate("/") : navigate("/login"))}
+                onClick={() => (isAuth ? navigate("/dashboard") : navigate("/login"))}
               />
             </div>
           </div>
@@ -152,7 +163,6 @@ function NavigationBar(props) {
           </div>
         </div>
       </div>
-
       <SideBarDrawer
         sx={{
           width: 300,
@@ -176,6 +186,23 @@ function NavigationBar(props) {
             />
           )}
         </DrawerHeader>
+        {CheckSideBarContainer() ? (
+          <List component="nav">
+            {SideBarItems.map((item, index) => (
+              <CustomizedListItem
+                drawer
+                key={item.id}
+                item={item}
+                index={index}
+                selectedIndex={selectedIndex}
+                handleSelectedIndex={handleSelectedIndex}
+                length={SideBarItems.length}
+              />
+            ))}
+          </List>
+        ) : (
+          <></>
+        )}
       </SideBarDrawer>
 
       {toggleSnackbar && (

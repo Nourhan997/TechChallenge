@@ -3,7 +3,12 @@
 
 
 .surveys{
-
+.labels{
+  width: 85%;
+  @media screen and (max-width: 800px) {
+    width: 60%;
+  }
+}
   .answers{
     background-color: $primary-color;
     color: white;
@@ -13,5 +18,14 @@
     align-items: center;
     justify-content: center;
     display: flex;
+    @media screen and (max-width: 800px) {
+      width: 40%;
+    }
+  }
+  .pie{
+    @media screen and (max-width: 800px) {
+      width: 100%;
+      overflow: scroll;
+    }
   }
 }
