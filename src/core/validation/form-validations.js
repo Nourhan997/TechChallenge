@@ -6,8 +6,8 @@ const passRegex = new RegExp(
 );
 
 export const emailValidator = (value) => {
-  if (value === "" || value === null) {
-    return { error: true, message: "FIELD_IS_REQUIRED" };
+  if (value === "" || value === null) { 
+    return { error: true, message: "Field is required" };
   } else {
     if (emailRegex.test(value)) {
       return {
@@ -17,7 +17,7 @@ export const emailValidator = (value) => {
     } else {
       return {
         error: true,
-        message: "INVALID_FORMAT",
+        message:  "Invalid Format",
       };
     }
   }
@@ -25,12 +25,12 @@ export const emailValidator = (value) => {
 
 export const nameValidator = (value) => {
   if (value === "" || value === null || !stringRegex.test(value)) {
-    return { error: true, message: "FIELD_IS_REQUIRED" };
+    return { error: true, message: "Field is required" };
   } else {
     if (value.length < 2 && value.length > 255) {
       return {
         error: true,
-        message: "FIELD_SHOULD_BE_AT_LEAST_2_CHARACTERS_LONG",
+        message: "FIELD SHOULD BE AT LEAST 2 CHARACTERS LONG",
       };
     }
     if (value.length > 255) {
@@ -49,7 +49,7 @@ export const nameValidator = (value) => {
 
 export const passwordValidator = (value) => {
   if (value === "" || value === null) {
-    return { error: true, message: "FIELD_IS_REQUIRED" };
+    return { error: true, message: "Field is required" };
   } else {
     if (passRegex.test(value)) {
       return {
@@ -69,13 +69,13 @@ export const passwordValidator = (value) => {
 export const requiredValidator = (value) => {
   if (typeof value === "object") {
     if (value === null || value?.length === 0) {
-      return { error: true, message: "FIELD_IS_REQUIRED" };
+      return { error: true, message: "Field is required" };
     } else {
       return { error: false, message: "" };
     }
   } else if (typeof value !== "object") {
     if (value === null || value === "" || !stringRegex.test(value)) {
-      return { error: true, message: "FIELD_IS_REQUIRED" };
+      return { error: true, message: "Field is required" };
     } else {
       return { error: false, message: "" };
     }

@@ -61,20 +61,20 @@
     "questions": [
       {
         "type": "qcm",
-        "label": "What best sellers are available in the store?",
+        "label": "How satisfied are you with the following factors ?",
         "options": [
-          "Product 1",
-          "Product 2",
-          "Product 3",
-          "Product 4",
-          "Product 5",
-          "Product 6"
+          "option 1",
+          "option 2",
+          "option 3",
+          "option 4",
+          "option 5",
+          "option 6"
         ],
         "answer": [3, 2, 1, 10, 4, 1]
       },
       {
         "type": "Inputnumeric",
-        "label": "Number of Visits Per year?",
+        "label": "How often do you typically shop at our store?",
         "options": [
           "January",
           "February",
@@ -91,7 +91,7 @@
       },
       {
         "type": "text",
-        "label": "What troubles are you facing??",
+        "label": "Did someone assist you with your shopping experience??",
         "options": null,
         "answer": [
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore aliqua.",
@@ -102,6 +102,61 @@
       {
         "type": "truefalse",
         "label": "Walmart is classified as an off price retailer",
+        "options": ["True", "False", "NotSure"],
+        "answer": [50, 40, 10]
+      }
+    ]
+  },
+  {
+    "survey": {
+      "name": "Max Stores ",
+      "code": "XX3",
+      "date": "Wed 20 October 2020 "
+    },
+    "questions": [
+      {
+        "type": "qcm",
+        "label": "What best sellers are available in the store?",
+        "options": [
+          "Product 1",
+          "Product 2",
+          "Product 3",
+          "Product 4",
+          "Product 5",
+          "Product 6"
+        ],
+        "answer": [3, 2, 1, 10, 4, 1]
+      },
+      {
+        "type": "Inputnumeric",
+        "label": "How often do you come to this store?",
+        "options": [
+          "January",
+          "February",
+          "March",
+          "April",
+          "May",
+          "June",
+          "July",
+          "Augest",
+          "September",
+          "October"
+        ],
+        "answer": [2, 6, 9, 12, 3, 3, 2, 5, 2, 6, 9, 12]
+      },
+      {
+        "type": "text",
+        "label": "What do you like the most about this store?",
+        "options": null,
+        "answer": [
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore aliqua.",
+          "Lorem ipsum dolor sit amet.",
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        ]
+      },
+      {
+        "type": "truefalse",
+        "label": "Are you happy with the collection in our store?",
         "options": ["True", "False", "NotSure"],
         "answer": [50, 40, 10]
       }

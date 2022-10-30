@@ -58,7 +58,7 @@ export function Surveys(props) {
       <TitleComponent title="Surveys" back={false} />
       <div className="search-bar-section w-50">
         <FormSearchBar
-          placeholder="Search By Name"
+          placeholder="Search By Code"
           variant="outlined"
           onChange={changeHandler}
         />
