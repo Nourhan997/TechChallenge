@@ -1,0 +1,17 @@
+@import "/src/theme/color.scss";
+@import "/src/theme/variables.scss";
+
+
+.surveys{
+
+  .answers{
+    background-color: $primary-color;
+    color: white;
+    width: 15%;
+    border: 1px solid;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+  }
+}

@@ -1,0 +1,45 @@
+@import "/src/theme/color.scss";
+@import "/src/theme/variables.scss";
+
+.no-data-found {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  color: $primary-color;
+}
+
+.page-not-found {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+.no-connection-container {
+  width: 100%;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .no-connection {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    .title {
+      @include font-size24();
+      color: $primary-color;
+    }
+    .no-connection-sub-title {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      color: $secondary-color;
+      @include font-size20();
+    }
+  }
+}

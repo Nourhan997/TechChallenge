@@ -1,0 +1,148 @@
+@import "/src/theme/color.scss";
+@import "/src/theme/variables.scss";
+
+body {
+  word-wrap: break-word;
+  padding-top: 90px;
+  margin: 0%;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  // font-size: 18px;
+  background-color: $body-color;
+  overflow-y: overlay;
+}
+.w-50{
+  width: 50%;
+}
+.w-40{
+  width: 40%;
+}
+.w-30{
+  width: 30%;
+}
+.page-container {
+  width: 100%;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-footer-style {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  // margin-left: auto;
+  margin-top: 10px;
+  justify-content: flex-end;
+
+  @media screen and (max-width: 400px) {
+    margin: auto;
+    padding-bottom: 10px;
+  }
+}
+
+.form-footer-elements {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 10%;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.underline-word {
+  text-decoration: underline;
+}
+
+.remove-padding {
+  padding: unset !important;
+}
+::-webkit-scrollbar-thumb {
+  background: $primary-color-opacity;
+  border-radius: 25px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: $primary-color;
+}
+
+.removePadding {
+  padding: 0px;
+}
+
+.margin-up-20 {
+  margin: 20px 0px;
+}
+
+.margin-up-10 {
+  margin: 10px 0px;
+}
+
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+}
+
+.flex-column-container {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.message-space {
+  text-align: center;
+  margin: 10px;
+
+  .message-content {
+    @include font-size16();
+    font-style: italic;
+    color: red;
+  }
+}
+
+.enable-switch-section {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+
+  :nth-child(1) {
+    @include font-size17();
+  }
+}
+
+.long-value-string {
+  text-overflow: ellipsis;
+  overflow-x: hidden;
+}
+.card-media-background {
+  background-color: $card-media-bg;
+}
+.avatar-style-50 {
+  width: 50px !important;
+  height: 50px !important;
+}
+.avatar-style-60 {
+  width: 60px !important;
+  height: 60px !important;
+}
+
+.my-1 {
+  margin: 1px 0px;
+}
+
+.scrollable-component {
+  overflow-y: overlay;
+}

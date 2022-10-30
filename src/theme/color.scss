@@ -1,0 +1,48 @@
+$primary-color: #3FAFD4; 
+$secondry-color: #253570 ;
+$primary-color-opacity: #02c0cc55;
+$black: #000000;
+$grey: #9a9a9a;
+$light-grey: #c1c1c1;
+$border-grey: #c4c4c4;
+$time: 0.5s;
+// $border-dark: rgba($base-color, 0.88);
+$primary-color-filter: invert(55%) sepia(40%) saturate(1029%) hue-rotate(136deg)
+  brightness(99%) contrast(98%);
+$primary-hover: #71a2a7;
+$primary-color-opacity: #02bfcc63;
+$secondary-color: #71a2a7;
+$secondary-color-faded: #02bfcc3f;
+$secondary-color-opacity: rgba(75, 163, 240, 0.582);
+$dark-primary: #041c3f;
+$blue: $primary-color;
+$light-gray: #a8a8a8;
+$white: #ffffff;
+$darkwhite: #e5e5e5;
+$shadow: rgba(0, 0, 0, 0.05);
+$input-colors: #adc9cd;
+$red-color: #eb3941;
+$light-red: #fff0f0;
+$label-color: #71a2a7;
+$opac-blue: #02c0cc;
+$light-input-color: #d6f3f4;
+$body-color: #f7f9f9;
+$card-media-bg: #eef3f3;
+$off-white: #fffae9;
+$yellow: #fec901;
+$calendar-weekend: #e4eeef;
+:export {
+  primaryColor: $primary-color;
+  secondaryColor: $secondry-color;
+  inputColor: $input-colors;
+  labelColor: $label-color;
+  whiteColor: $white;
+  darkWhiteColor: $darkwhite;
+  lightInputColor: $light-input-color;
+  bodyColor: $body-color;
+  redColor: $red-color;
+  lightRedColor: $light-red;
+  offWhiteColor: $off-white;
+  yellowColor: $yellow;
+  calendarWeekendColor: $calendar-weekend;
+}

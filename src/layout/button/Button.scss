@@ -1,0 +1,33 @@
+@import "/src/theme/color.scss";
+@import "/src/theme/variables.scss";
+
+.link-button {
+  padding: 0px !important;
+  background-color: none !important;
+  @include font-size14();
+}
+.delete-link-button:hover {
+  color: $red-color !important;
+}
+.default-link-button:hover {
+  color: $primary-color !important;
+}
+.left-padding {
+  padding: 0px 0px 0px 5px !important;
+  width: fit-content !important;
+  //   padding: 0px !important;
+  @include font-size14();
+}
+
+.categoryfield-linkedbutton {
+  color: $primary-color !important;
+  @include font-size18();
+  font-weight: 500;
+  text-decoration: underline !important;
+}
+.icon-button-style {
+  padding: 0px !important;
+}
+.my-icon-button-style {
+  padding: 0px 4px !important;
+}

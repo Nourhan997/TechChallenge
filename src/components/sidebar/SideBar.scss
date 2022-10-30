@@ -1,0 +1,50 @@
+@import "/src/theme/color.scss";
+@import "/src/theme/variables.scss";
+
+.side-bar-layout {
+  display: flex;
+  flex-flow: row nowrap;
+
+  max-width: 2000px;
+  gap: 2%;
+  padding-top: 40px;
+  padding: 0px 40px 0px 40px;
+  margin: 0px auto;
+  .side-bar-container {
+    .MuiTypography-root {
+      @include font-size17();
+    }
+  }
+
+  .side-bar-list {
+    min-width: 20%;
+    max-width: 25%;
+
+    // flex-shrink: 1;
+    // flex-grow: 0;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+
+    @media only screen and (max-width: $mobile_breakpoints) {
+      display: none;
+    }
+  }
+  .side-bar-children {
+    min-width: 75%;
+    max-width: 80%;
+    // width: 70%;
+
+    flex-shrink: 1;
+    flex-grow: 1;
+
+    display: flex;
+    flex-flow: column nowrap;
+
+    @media only screen and (max-width: $mobile_breakpoints) {
+      min-width: unset;
+      max-width: unset;
+      width: 100%;
+    }
+  }
+}

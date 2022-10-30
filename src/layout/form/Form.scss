@@ -1,0 +1,55 @@
+@import "/src/theme/color.scss";
+@import "/src/theme/variables.scss";
+
+//FORM OUTSIDE A TAB
+.outside-tab-form {
+  padding: 30px 45px 30px 45px;
+
+  @media only screen and (max-width: 600px) {
+    padding: 30px 30px 30px 30px;
+    width: 80%;
+    margin: auto;
+  }
+
+  @media only screen and (max-width: 400px) {
+    width: 80%;
+    margin: auto;
+  }
+
+  .form-title {
+    @include font-size20();
+    font-weight: bold;
+    line-height: 23px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-top: unset;
+  }
+
+  .form-children {
+    display: flex;
+    flex-flow: column nowrap;
+  }
+}
+
+//FORM INSIDE A TAB
+.inside-tab-form {
+  padding: 0px;
+
+  @media only screen and (max-width: 600px) {
+    width: 80%;
+    margin: auto;
+  }
+
+  .form-title {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 23px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+
+  .form-children {
+    display: flex;
+    flex-flow: column nowrap;
+  }
+}
